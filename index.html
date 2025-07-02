@@ -467,6 +467,33 @@
             background: rgba(255,255,255,0.2);
         }
 
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkbox-item:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
         .testimonials {
             background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
             color: white;
@@ -765,14 +792,4 @@
                         <label>Music Integration:</label>
                         <select name="music">
                             <option value="">Do you want music features?</option>
-                            <option value="spotify">🎵 Yes, add Spotify QR codes</option>
-                            <option value="apple">🎶 Yes, add Apple Music QR codes</option>
-                            <option value="youtube">📺 Yes, add YouTube playlist QR codes</option>
-                            <option value="none">No music features needed</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Special Features (select all that apply):</label>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                            <label style="display: flex; align 
+                            <option value="spotify">
